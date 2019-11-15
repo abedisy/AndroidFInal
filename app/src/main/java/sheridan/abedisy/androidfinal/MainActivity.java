@@ -35,13 +35,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-        btn = findViewById(R.id.goToCustomeDate);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "sorry not sorry", Toast.LENGTH_LONG).show();
-            }
-        });
+
     }
 
 
