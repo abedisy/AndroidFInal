@@ -13,9 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MakeAMemoryActivity"></activity>
-        <activity android:name=".CustomizeYourDateActiviy" />
-        <activity android:name=".FindResturantActivity" />
+        <activity android:name=".MakeAMemoryActivity" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".CustomizeYourDateActiviy" android:parentActivityName=".MainActivity" />
+        <activity android:name=".FindResturantActivity" android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
