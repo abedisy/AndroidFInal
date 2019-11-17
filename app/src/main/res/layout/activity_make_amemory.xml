@@ -25,7 +25,7 @@
         android:layout_marginTop="132dp"
         android:text="Save Picture"
         app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -34,7 +34,7 @@
         android:layout_width="100dp"
         android:layout_height="61dp"
         android:layout_marginTop="132dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginEnd="92dp"
         android:onClick="showGallaryPics"
         android:text="Open Gallary"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,8 +42,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="252dp"
-        android:layout_height="274dp"
+        android:layout_width="374dp"
+        android:layout_height="317dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
