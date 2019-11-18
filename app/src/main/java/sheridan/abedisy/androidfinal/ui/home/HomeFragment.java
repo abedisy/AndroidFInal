@@ -1,7 +1,9 @@
 package sheridan.abedisy.androidfinal.ui.home;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
@@ -34,6 +38,9 @@ public class HomeFragment extends Fragment  {
     int[] sampleImages = new int[]{R.drawable.sunset, R.drawable.frenchresturant, R.drawable.drinkpicture};
 
     private HomeViewModel homeViewModel;
+    private static final String TAG = "HomeFrgament";
+
+    private static final int ERROR_DIALOG_REQUST = 9001;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -69,8 +76,10 @@ public class HomeFragment extends Fragment  {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getActivity(),"Find Resturant!",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getContext(), FindResturantActivity.class);
-                startActivity(intent);
+
+                    Intent intent = new Intent(getContext(), FindResturantActivity.class);
+                    startActivity(intent);
+
             }
         });
 
@@ -95,5 +104,21 @@ public class HomeFragment extends Fragment  {
 
         return root;
 
+    }
+
+    public boolean isServicesOK(){
+        Log.d(TAG, "isServicesOK: checking google services version");
+        int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(getActivity());
+        if(available == ConnectionResult.SUCCESS){
+            Log.d(TAG, "isServicesOK: Google Play services is working");
+        }else if (GoogleApiAvailability.getInstance().isUserResolvableError(available)){
+            Log.d(TAG, "isServicesOK: an error occuired but its fixable");
+            Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(getActivity(), available , ERROR_DIALOG_REQUST);
+            dialog.show();
+        }else{
+            Toast.makeText(getActivity(), "You Can't make map reuests", Toast.LENGTH_SHORT).show();
+        }
+
+        return false;
     }
 }

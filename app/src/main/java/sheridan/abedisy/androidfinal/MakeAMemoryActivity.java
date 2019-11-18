@@ -1,5 +1,6 @@
 package sheridan.abedisy.androidfinal;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
@@ -119,7 +120,7 @@ public class MakeAMemoryActivity extends AppCompatActivity {
 
 
 
-    /* @Override
+     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
@@ -133,6 +134,6 @@ public class MakeAMemoryActivity extends AppCompatActivity {
             }
 
         }
-    }*/
+    }
 
 }
