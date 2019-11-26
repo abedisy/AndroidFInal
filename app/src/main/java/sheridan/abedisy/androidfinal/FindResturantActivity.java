@@ -129,6 +129,9 @@ private ImageView mGPS;
 
             moveCamera(new LatLng(address.getLatitude(), address.getLongitude()), DEFAULT_ZOOM, address.getAddressLine(0));
         }
+        mSearchText.getText().clear();
+
+
 
     }
 
