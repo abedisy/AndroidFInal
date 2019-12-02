@@ -60,14 +60,14 @@ public class HomeFragment extends Fragment  {
         CustomizeDate = root.findViewById(R.id.customizeDate);
         MakeMemory = root.findViewById(R.id.MakeAMemory);
 
-        carouselView = root.findViewById(R.id.carouselView);
-        carouselView.setPageCount(sampleImages.length);
-        carouselView.setImageListener(new ImageListener() {
+       //carouselView = root.findViewById(R.id.carouselView);
+        //carouselView.setPageCount(sampleImages.length);
+       /* carouselView.setImageListener(new ImageListener() {
             @Override
             public void setImageForPosition(int position, ImageView imageView) {
                 imageView.setImageResource(sampleImages[position]);
             }
-        });
+        });*/
 
 
 
