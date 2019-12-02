@@ -15,6 +15,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class CustomizeYourDateActiviy extends AppCompatActivity {
 
     Spinner spinnerRelationshipStage;
@@ -88,26 +90,31 @@ public class CustomizeYourDateActiviy extends AppCompatActivity {
 
 
 
-       if(RelationshipResult.equals("Beginner")&&ResturantResult.equals("Medetaranian")&&check1 && radioResult.equals("No")) {
+       if(RelationshipResult.equals("Beginner")&&ResturantResult.equals("Mediterranean")&&check1 && radioResult.equals("No")) {
 //           Toast.makeText(CustomizeYourDateActiviy.this, "shawerma-x", Toast.LENGTH_SHORT).show();
            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
-           intent.putExtra("message1",1);
+           intent.putExtra("message1","message1");
            startActivity(intent);
 
        }
 
-       else if(RelationshipResult.equals("Beginner")&&ResturantResult.equals("Medetaranian")&&check3 && radioResult.equals("No")){
+       else if(RelationshipResult.equals("Beginner")&&ResturantResult.equals("Mediterranean")&&check3 && radioResult.equals("No")){
 //           Toast.makeText(CustomizeYourDateActiviy.this, "Shawema Royal", Toast.LENGTH_SHORT).show();
            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
-           intent.putExtra("message2",2);
+           intent.putExtra("message2","message2");
            startActivity(intent);
 
        }
 
-       else if (RelationshipResult.equals("Advanced")&&ResturantResult.equals("italian")){
-           Toast.makeText(CustomizeYourDateActiviy.this, "east side marios", Toast.LENGTH_SHORT).show();
+       else if (RelationshipResult.equals("Advanced")&&ResturantResult.equals("Italian")&&check3 && radioResult.equals("Yes")){
+          // Toast.makeText(CustomizeYourDateActiviy.this, "east side marios", Toast.LENGTH_SHORT).show();
 
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message3","message3");
+           startActivity(intent);
        }
+
+
 
 
        else{

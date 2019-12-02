@@ -7,11 +7,18 @@
     <string-array name="relationshipStageSpinner">
         <item>Select</item>
         <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Intermediate</item>
         <item>Advanced</item>
+        <item>Married</item>
+
     </string-array>
     <string-array name="resturantSpinner">
         <item>Select</item>
-        <item>italian</item>
-        <item>Medetaranian</item>
+        <item>Asian</item>
+        <item>Italian</item>
+        <item>Indian</item>
+        <item>Mexican</item>
+        <item>Mediterranean</item>
     </string-array>
 </resources>

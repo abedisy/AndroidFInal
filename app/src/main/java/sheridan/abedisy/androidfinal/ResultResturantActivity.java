@@ -2,6 +2,7 @@ package sheridan.abedisy.androidfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -22,15 +23,24 @@ public class ResultResturantActivity extends AppCompatActivity {
 
 
 
-        String message1 = getIntent().getStringExtra("message1");
-        resturantName.setText("Shawerma -XX");
-        resturantAddress.setText("2555 thee st");
-        resturantNumber.setText("905  607 9078");
 
-        String message2 = getIntent().getStringExtra("message2");
-        resturantName.setText("Shawerma Royal - Garlic");
-        resturantAddress.setText("2555 thee st");
-        resturantNumber.setText("905  607 9078");
+        if(getIntent().hasExtra("message1")){
+            resturantName.setText("Shawerma -XX");
+            resturantAddress.setText("2555 thee st");
+            resturantNumber.setText("905  607 9078");
+
+        }else if(getIntent().hasExtra("message2")){
+            resturantName.setText("Shawerma Royale");
+            resturantAddress.setText("2555 thee st");
+            resturantNumber.setText("905  607 9078");
+
+        }else if(getIntent().hasExtra("message3")){
+            resturantName.setText("East Side Marios");
+            resturantAddress.setText("2555 thee st");
+            resturantNumber.setText("905  607 9078");
+        }
+
+
 
     }
 }
