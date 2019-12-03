@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -59,6 +60,8 @@ public class FindResturantActivity extends AppCompatActivity implements OnMapRea
 
             init();
         }
+
+
     }
 
 private static String TAG = "FindResturantActivity";
@@ -72,7 +75,7 @@ private GoogleMap mMap;
 
 private EditText mSearchText;
 private ImageView mGPS;
-
+private String rest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +86,12 @@ private ImageView mGPS;
 
         mSearchText = (EditText)findViewById(R.id.input_search);
         mGPS = (ImageView)findViewById(R.id.ic_gps);
+
+
+       Intent intent = getIntent();
+        rest = intent.getStringExtra("key");
+        mSearchText.setText(rest);
+
 
         getLocationPermissions();
 
@@ -95,12 +104,13 @@ private ImageView mGPS;
                 if(actionId == EditorInfo.IME_ACTION_SEARCH
                         || actionId == EditorInfo.IME_ACTION_DONE
                         || keyEvent.getAction() == keyEvent.ACTION_DOWN
-                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER){
+                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER || keyEvent.getAction() == keyEvent.KEYCODE_DPAD_CENTER){
                     //execute for searching
                     geoLocate();
                 }
                 return false;
             }
+
         });
 
         mGPS.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +124,10 @@ private ImageView mGPS;
     }
 
     private void geoLocate(){
+
+
+
+
         String seachString = mSearchText.getText().toString();
         Geocoder geocoder = new Geocoder(FindResturantActivity.this);
         List<Address> list = new ArrayList<>();
@@ -129,7 +143,14 @@ private ImageView mGPS;
 
             moveCamera(new LatLng(address.getLatitude(), address.getLongitude()), DEFAULT_ZOOM, address.getAddressLine(0));
         }
+
+
+
+
         mSearchText.getText().clear();
+
+
+
 
 
 
