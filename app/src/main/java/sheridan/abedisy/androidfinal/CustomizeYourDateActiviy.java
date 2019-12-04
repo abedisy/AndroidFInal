@@ -89,8 +89,8 @@ public class CustomizeYourDateActiviy extends AppCompatActivity {
 
 
 
-
-       if(RelationshipResult.equals("Beginner")&&ResturantResult.equals("Mediterranean")&&check1 && radioResult.equals("No")) {
+//Meditranian
+       if( (RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Mediterranean")&&check1 && (radioResult.equals("Yes")||radioResult.equals("No"))) {
 //           Toast.makeText(CustomizeYourDateActiviy.this, "shawerma-x", Toast.LENGTH_SHORT).show();
            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
            intent.putExtra("message1","message1");
@@ -98,7 +98,7 @@ public class CustomizeYourDateActiviy extends AppCompatActivity {
 
        }
 
-       else if(RelationshipResult.equals("Beginner")&&ResturantResult.equals("Mediterranean")&&check3 && radioResult.equals("No")){
+       else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Mediterranean")&&check3 && (radioResult.equals("Yes")||radioResult.equals("No"))){
 //           Toast.makeText(CustomizeYourDateActiviy.this, "Shawema Royal", Toast.LENGTH_SHORT).show();
            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
            intent.putExtra("message2","message2");
@@ -106,19 +106,108 @@ public class CustomizeYourDateActiviy extends AppCompatActivity {
 
        }
 
-       else if (RelationshipResult.equals("Advanced")&&ResturantResult.equals("Italian")&&check3 && radioResult.equals("Yes")){
-          // Toast.makeText(CustomizeYourDateActiviy.this, "east side marios", Toast.LENGTH_SHORT).show();
-
+       else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Mediterranean")&&check2 &&  (radioResult.equals("Yes")||radioResult.equals("No")) ) {
            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
-           intent.putExtra("message3","message3");
+           intent.putExtra("message3", "message3");
            startActivity(intent);
        }
 
 
 
+//Asian
+        else if( (RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Asian")&&check1 && (radioResult.equals("Yes")||radioResult.equals("No"))) {
+//           Toast.makeText(CustomizeYourDateActiviy.this, "shawerma-x", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+            intent.putExtra("message4","message4");
+            startActivity(intent);
+
+        }
+
+        else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Asian")&&check3 && (radioResult.equals("Yes")||radioResult.equals("No"))){
+//           Toast.makeText(CustomizeYourDateActiviy.this, "Shawema Royal", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+            intent.putExtra("message5","message5");
+            startActivity(intent);
+
+        }
+
+        else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Asian")&&check2 &&  (radioResult.equals("Yes")||radioResult.equals("No")) ) {
+            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+            intent.putExtra("message6", "message6");
+            startActivity(intent);
+        }
+
+
+        //Italian
+       else if( (RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Italian")&&check1 && (radioResult.equals("Yes")||radioResult.equals("No"))) {
+//           Toast.makeText(CustomizeYourDateActiviy.this, "shawerma-x", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message7","message7");
+           startActivity(intent);
+
+       }
+
+       else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Italian")&&check3 && (radioResult.equals("Yes")||radioResult.equals("No"))){
+//           Toast.makeText(CustomizeYourDateActiviy.this, "Shawema Royal", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message8","message8");
+           startActivity(intent);
+
+       }
+
+       else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Italian")&&check2 &&  (radioResult.equals("Yes")||radioResult.equals("No")) ) {
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message9", "message9");
+           startActivity(intent);
+       }
+//Indian
+       else if( (RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Indian")&&check1 && (radioResult.equals("Yes")||radioResult.equals("No"))) {
+//           Toast.makeText(CustomizeYourDateActiviy.this, "shawerma-x", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message10","message10");
+           startActivity(intent);
+
+       }
+
+       else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Indian")&&check3 && (radioResult.equals("Yes")||radioResult.equals("No"))){
+//           Toast.makeText(CustomizeYourDateActiviy.this, "Shawema Royal", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message11","message11");
+           startActivity(intent);
+
+       }
+
+       else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Indian")&&check2 &&  (radioResult.equals("Yes")||radioResult.equals("No")) ) {
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message12", "message12");
+           startActivity(intent);
+       }
+
+ //Mexican
+       else if( (RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Mexican")&&check1 && (radioResult.equals("Yes")||radioResult.equals("No"))) {
+//           Toast.makeText(CustomizeYourDateActiviy.this, "shawerma-x", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message13","message13");
+           startActivity(intent);
+
+       }
+
+       else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Mexican")&&check3 && (radioResult.equals("Yes")||radioResult.equals("No"))){
+//           Toast.makeText(CustomizeYourDateActiviy.this, "Shawema Royal", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message14","message14");
+           startActivity(intent);
+
+       }
+
+       else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Mexican")&&check2 &&  (radioResult.equals("Yes")||radioResult.equals("No")) ) {
+           Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
+           intent.putExtra("message15", "message15");
+           startActivity(intent);
+       }
 
        else{
-           Toast.makeText(CustomizeYourDateActiviy.this, "no no no", Toast.LENGTH_SHORT).show();
+           Toast.makeText(CustomizeYourDateActiviy.this, "Please Select valid fields", Toast.LENGTH_SHORT).show();
 
 
        }
