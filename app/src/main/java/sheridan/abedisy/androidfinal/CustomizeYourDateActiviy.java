@@ -148,7 +148,7 @@ public class CustomizeYourDateActiviy extends AppCompatActivity {
        }
 
        else if((RelationshipResult.equals("Beginner")||RelationshipResult.equals("Intermediate")||RelationshipResult.equals("Advanced")||RelationshipResult.equals("Married"))&&ResturantResult.equals("Italian")&&check3 && (radioResult.equals("Yes")||radioResult.equals("No"))){
-//           Toast.makeText(CustomizeYourDateActiviy.this, "Shawema Royal", Toast.LENGTH_SHORT).show();
+//           Toast.makeText(CustomizeYourDateActiviy.this, "Shitalawema Royal", Toast.LENGTH_SHORT).show();
            Intent intent = new Intent(CustomizeYourDateActiviy.this, ResultResturantActivity.class);
            intent.putExtra("message8","message8");
            startActivity(intent);

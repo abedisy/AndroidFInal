@@ -17,18 +17,21 @@ public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
 
+    TextView textView10;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+        textView10 = root.findViewById(R.id.textView10);
+        textView.setText("Dashboard");
+        textView10.setText("This feature will be available in the upcoming version release 2.3.1. \n \n Users will be able to view friend's location and which restaurants do they visit most.  ");
+
+
+
         return root;
     }
 }

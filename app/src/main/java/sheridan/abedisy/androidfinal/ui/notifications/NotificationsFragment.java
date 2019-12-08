@@ -21,18 +21,26 @@ public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
 
+    TextView textView4;
+    TextView textView5;
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         notificationsViewModel =
                 ViewModelProviders.of(this).get(NotificationsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+        textView.setText("About us");
+
+        textView4 = root.findViewById(R.id.textView4);
+        textView5 = root.findViewById(R.id.textView5);
+
+
+        textView4.setText("This App is made to help couples no mattter what their relationship status is find a place to eat and have a good time. ");
+        textView5.setText("In this application we have used: \n * Fragments \n * Multi-media (Camera) \n * Location Based Services");
+
 
 
 

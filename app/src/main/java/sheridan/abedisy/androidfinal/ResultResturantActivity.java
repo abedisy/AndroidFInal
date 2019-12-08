@@ -33,52 +33,52 @@ public class ResultResturantActivity extends AppCompatActivity {
 
 //Meditranian
         if(getIntent().hasExtra("message1")){
-            resturantName.setText("SHAWARMA X");
+            resturantName.setText("Shawarma X");
             resturantAddress.setText("483 Dundas St W Unit no 2, Oakville, ON L6M 4M2");
             resturantNumber.setText("(905) 257-7222");
 
         }else if(getIntent().hasExtra("message2")){
-            resturantName.setText("6039 Erin Mills Pkwy, Mississauga, ON L5N 0G5");
-            resturantAddress.setText("2555 thee st");
+            resturantName.setText("Shawerma Royale");
+            resturantAddress.setText("6039 Erin Mills Pkwy, Mississauga, ON L5N 0G5");
             resturantNumber.setText("(905) 826-4949");
 
         }else if(getIntent().hasExtra("message3")){
-            resturantName.setText("Osmow's Shawarma");
+            resturantName.setText("Shawarma Box");
             resturantAddress.setText("251 Queen St S, Mississauga, ON L5M 1L7");
             resturantNumber.setText("(905) 826-6021");
 
         }
         //Asian
         else if(getIntent().hasExtra("message4")){
-            resturantName.setText("Wok of Fame Restaurant");
+            resturantName.setText("Wok of Fame");
             resturantAddress.setText("7700 Hurontario St #602, Brampton, ON L6Y 4M3");
             resturantNumber.setText("(905) 230-1318");
         }
         else if(getIntent().hasExtra("message5")){
-        resturantName.setText("Mandarin Restaurant");
-        resturantAddress.setText("87 Matheson Blvd E, Mississauga, ON L4Z 1X8");
+        resturantName.setText("Thai House Cuisine 2");
+        resturantAddress.setText("261 Lakeshore Rd E, Mississauga, ON L5G 1G8");
         resturantNumber.setText("(905) 502-8000");
         }
         else if(getIntent().hasExtra("message6")){
-            resturantName.setText("Hakka Legend Asian Cuisine");
-            resturantAddress.setText("6415 Erin Mills Pkwy, Mississauga, ON L5N 4H4");
+            resturantName.setText("King Asian");
+            resturantAddress.setText(" 2500 Hurontario St, Mississauga, ON L5B 1N4");
             resturantNumber.setText("(905) 542-9888");
         }
 
         //Italian
         else if(getIntent().hasExtra("message7")){
-            resturantName.setText("Ritono");
+            resturantName.setText("Ritorno");
             resturantAddress.setText("261 Oak Walk Dr Unit #8, Oakville, ON L6H 6M3");
             resturantNumber.setText("(905) 257-5881");
         }
         else if(getIntent().hasExtra("message8")){
-            resturantName.setText("Trattoria Timone Ristorante");
+            resturantName.setText("Trattoria Timone");
             resturantAddress.setText("2091 Winston Park Dr, Oakville, ON L6H 6P5");
             resturantNumber.setText("(905) 842-2906");
         }
         else if(getIntent().hasExtra("message9")){
-            resturantName.setText("IL FORNELLO");
-            resturantAddress.setText("203 North Service Rd W, Oakville, ON L6M 3R2");
+            resturantName.setText("Thyme Ristorante");
+            resturantAddress.setText("347 Lakeshore Rd E, Mississauga, ON L5G 1H6");
             resturantNumber.setText("(905) 338-5233");
         }
 //Indian
@@ -93,7 +93,7 @@ public class ResultResturantActivity extends AppCompatActivity {
             resturantNumber.setText("(905) 457-9999");
         }
         else if(getIntent().hasExtra("message12")){
-            resturantName.setText("TYC - by Sanjeev Kapoor");
+            resturantName.setText("TYC by Sanjeev Kapoor");
             resturantAddress.setText("111 Trafalgar Rd, Oakville, ON L6J 3G3");
             resturantNumber.setText("(905) 842-8926");
         }
@@ -104,13 +104,13 @@ public class ResultResturantActivity extends AppCompatActivity {
             resturantNumber.setText("(289) 837-0111");
         }
         else if(getIntent().hasExtra("message14")){
-            resturantName.setText("barBURRITO");
-            resturantAddress.setText("1903 Iron Oak Way, Oakville, ON L6H 0N1");
+            resturantName.setText("El Jefe");
+            resturantAddress.setText("66 Lakeshore Rd E, Mississauga, ON L5G 1E1");
             resturantNumber.setText("(905) 815-8444");
         }
         else if(getIntent().hasExtra("message15")){
-            resturantName.setText("Señor Burrito");
-            resturantAddress.setText("2155 Leanne Blvd unit # 104, Mississauga, ON L5K 2K8");
+            resturantName.setText("Mad Mexican");
+            resturantAddress.setText("405 Jane St, Toronto, ON M6S 3Z6");
             resturantNumber.setText("(905) 916-2712");
         }
 
@@ -129,7 +129,7 @@ public class ResultResturantActivity extends AppCompatActivity {
     }
 
     public void goToLocate(){
-        Toast.makeText(ResultResturantActivity.this, "Trouble seaching? Just delete one letter from resturant name and type it again",
+        Toast.makeText(ResultResturantActivity.this, "Trouble searching? Just delete one letter from the restaurant name and type it again. Redirecting ..",
                 Toast.LENGTH_LONG).show();
         new Handler().postDelayed(new Runnable() {
             @Override

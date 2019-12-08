@@ -2,7 +2,7 @@
     <string name="app_name">AndroidFInal</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">About Us</string>
     <string name="google_API_key">AIzaSyAiuX05feaUrmkk13Ax4-3uKVQyyDS8ou4</string>
     <string-array name="relationshipStageSpinner">
         <item>Select</item>
